@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto 1 - Detalhes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<!-- Fim head -->
+
+<body class="bg-gray-100">
+
+  <!-- Voltar -->
+  <nav class="bg-white p-4 shadow-md sticky top-0 z-50 rounded-b-lg">
+    <div class="container mx-auto flex items-center">
+      <a href="javascript:history.back()"
+        class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 flex items-center">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Voltar
+      </a>
+    </div>
+  </nav>
+  <!-- Fim voltar -->
+
+  <header class="relative flex items-center justify-center text-white py-80 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('case_1_hero.png');"></div>
+  </header>
+
+
+  <section class="bg-white py-16 px-4 shadow-md">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 text-center mb-24">Construindo valor com Design System: <br> <span
+          class="text-2xl"> Da implementação à metrificação. </span>
+
+        <!-- Seção 1 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Contexto e desafio</h2>
+
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          Apesar de o Sebrae já contar com um Design System no Figma e no Storybook, o produto do Empretec exigiu a
+          criação de um novo sistema, devido a necessidades específicas não contempladas pelo DS existente.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          Com o produto em andamento e uma rotina intensa de reuniões, testes e entregas, o principal desafio foi
+          desenvolver novos componentes sem comprometer o fluxo de trabalho.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-24">
+          Identifiquei inconsistências e retrabalho recorrente, o que reforçou a necessidade de estruturar um Design
+          System mais adequado à realidade do projeto.
+        </p>
+        <!-- Fim seção 1 -->
+
+        <!-- Seção 2 -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Objetivos</h2>
+
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          Alem da preocupação com a estética/layout, há também com a eficiência dos novos componentes e a comunicação
+          com
+          todo o time. <br>
+          Sendo assim, os objetivos são:
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          <span class="font-bold"> Reduzir retrabalho e correções </span> <br>
+          ↳ Identificar e criar padrões claros e reutilizáveis para evitar retrabalho, desalinhamento e inconsistências.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          <span class="font-bold"> Garantir consistência visual e funcional </span> <br>
+          ↳ Padronizar componentes para que as telas sigam uma linguagem unificada, mesmo com diferentes entregas.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          <span class="font-bold"> Otimizar o tempo de produção </span> <br>
+          ↳ Reduzir decisões repetitivas criando uma base de componentes prontos, acelerando o fluxo de design.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          <span class="font-bold"> Melhorar a comunicação com o time de desenvolvimento </span> <br>
+          ↳ Documentar os componentes de forma clara para facilitar o handoff e evitar interpretações erradas.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          <span class="font-bold"> Aumentar a escalabilidade do projeto </span> <br>
+          ↳ Criar uma base sólida que permita futuras evoluções sem a necessidade de refazer componentes do zero.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-32">
+          <span class="font-bold"> Adaptar o Design System às necessidades específicas do produto </span> <br>
+          ↳ Garantir que o sistema reflita as particularidades do Empretec, sem depender exclusivamente do DS genérico
+          da
+          organização.
+        </p>
+        <!-- Fim seção 2 -->
+
+        <!-- Seção 3 / com imagem / Problemas e soluções -->
+        <div id="cases-content" class="tab-content">
+          <h2 class="text-4xl font-bold text-gray-800 mb-16">Problemas e soluções</h2>
+
+          <!-- Problema 1 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-2/3 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Família tipográfica</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                O Design System existente incluía cinco fontes diferentes, que não estavam alinhadas ao Brandbook do
+                Empretec. <br><br>
+                Como a fonte oficial do projeto é a Inter (ainda não prevista no DS), iniciei a criação de um novo
+                Design System a partir da padronização tipográfica. <br>
+                As fontes anteriores foram removidas e a Inter foi incorporada como única fonte oficial. <br><br>
+                Para facilitar futuros ajustes, criei as variáveis da tipografia.
+              </p>
+            </div>
+            <div class="md:w-2/3 flex justify-center md:justify-end">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+                <img src="case_1_problema_1.png" alt="Blog Post Image" class="w-full h-80 object-cover">
+              </div>
+            </div>
+          </div>
+          <!-- Fim problema 1 -->
+
+
+          <!-- Problema 2 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-2/3 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Componentes - Tipografia</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Como a família tipográfica anterior não incluía a fonte Inter, os componentes existentes não seguiam a
+                diretriz do Brandbook. <br><br>
+                Após a inclusão da Inter como fonte principal e, graças à componentização estruturada, foi possível
+                atualizar todos os componentes de forma automática via componente master.
+              </p>
+            </div>
+            <div class="md:w-2/3 flex justify-center md:justify-end">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+                <img src="case_1_problema_2.png" alt="Blog Post Image" class="w-full h-80 object-cover">
+              </div>
+            </div>
+          </div>
+          <!-- Fim problema 2 -->
+
+
+          <!-- Problema 3 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-2/3 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Componentes - Novos</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Além dos ajustes tipográficos, foi necessário criar diversos componentes exclusivos para o Empretec, 
+                considerando as particularidades de seus quatro módulos (Urbano, Rural, Arena e Startup). <br><br>
+                Cada módulo demandou definições específicas de cores e alguns elementos, porém, headers, footers, inputs, botões entre outros,
+                seguiam os mesmos padrões, garantindo identidade visual e funcionalidade consistentes em cada contexto.
+              </p>
+            </div>
+            <div class="md:w-2/3 flex justify-center md:justify-end">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+                <img src="case_1_problema_3.png" alt="Blog Post Image" class="w-full h-80 object-cover">
+              </div>
+            </div>
+          </div>
+          <!-- Fim problema 3 -->
+
+
+          <!-- Problema 4 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-2/3 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Paleta de cores</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                A ausência da paleta de cores do Empretec no DS exigia a aplicação manual das cores, copiadas em áreas
+                isoladas no arquivo, o que comprometia a agilidade do processo e gerava inconsistências visuais.
+                <br><br>
+                Essas inconsistências, que ocoriam em alguns momentos, eram identificadas durante testes ou no
+                desenvolvimento, causando retrabalho e afetando a produtividade da equipe. <br><br>
+                Para solucionar o problema, a nova paleta foi estruturada como variáveis no Figma e documentada em uma
+                aba dedicada, promovendo padronização, acesso rápido e alinhamento entre design e desenvolvimento.
+              </p>
+            </div>
+            <div class="md:w-2/3 flex justify-center md:justify-end">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+                <img src="case_1_problema_4.png" alt="Blog Post Image" class="w-full object-cover">
+              </div>
+            </div>
+          </div>
+          <!-- Fim problema 4 -->
+
+        </div>
+        <!-- Fim seção 3 / com imagem -->
+
+
+        <!-- Seção 4 / com imagem / Metrificação -->
+        <div id="cases-content" class="tab-content">
+          <h2 class="text-4xl font-bold text-gray-800 mb-16">Resultados obtidos</h2>
+
+          <!-- Resultado 1 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-full text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Família tipográfica</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Após a padronização dos componentes master, as inconsistências tipográficas deixaram de ocorrer durante os testes e o desenvolvimento. <br>
+                Com isso, não foram mais necessários ajustes posteriores, garantindo 100% do aproveitamento do tempo investido nessa etapa.
+              </p>
+            </div>
+          </div>
+          <!-- Fim resultado 1 -->
+
+          <!-- Resultado 2 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-full text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Componentes</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                A componentização dos elementos em tela reduziu significativamente os erros, tornando-os praticamente inexistentes. <br>
+                Em casos pontuais (devido à evolução contínua do produto) é necessário descomponentizar temporariamente para ajustes específicos. <br>
+                Quando essas necessidades se tornam recorrentes, um novo componente é criado e integrado ao Design System, 
+                garantindo escalabilidade e manutenção da consistência.
+              </p>
+            </div>
+          </div>
+          <!-- Fim resultado 2 -->
+
+          <!-- Resultado 3 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-full text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Paleta de cores</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Com a inclusão da nova paleta de cores nas variáveis e estilos no Figma, eliminou-se a necessidade de aplicação manual e o uso 
+                de referências soltas no arquivo. <br> 
+                A criação dos estilos centralizados resultou em ganho significativo de produtividade, 
+                maior agilidade no acesso às cores e redução quase total de inconsistências visuais.              
+              </p>
+            </div>
+          </div>
+          <!-- Fim resultado 3 -->
+
+          <!-- Resultado 4 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-full text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Comunicação</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Com o Design System definido e as páginas do Figma organizadas por tema (como cores, tipografia, componentes, entre outros), 
+                a comunicação se tornou mais eficiente. <br>
+                A estrutura clara e segmentada facilitou o acesso às informações, 
+                reduzindo o tempo de busca e melhorando o alinhamento entre todos os envolvidos.              
+              </p>
+            </div>
+          </div>
+          <!-- Fim resultado 4 -->
+
+          <!-- Resultado 5 -->
+          <div class="flex flex-col md:flex-row gap-12 mb-24">
+            <div class="md:w-full text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Design System</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Embora o Design System tenha resolvido os principais problemas de consistência visual, 
+                padronização de componentes e até mesmo facilitado a comunicação entre design e todos os envolvidos, 
+                ele continua em constante evolução. <br>
+                À medida que o produto cresce e novas funcionalidades são desenvolvidas, 
+                surgem demandas específicas que exigem a criação ou adaptação dos componentes, reforçando a necessidade 
+                de manter o DS como um sistema vivo e iterativo.    
+              </p>
+            </div>
+          </div>
+          <!-- Fim resultado 5 -->
+
+        </div>
+        <!-- Fim seção 4 / com imagem -->
+
+
+        <!-- Conclusão -->
+        <div id="cases-content" class="tab-content">
+          <h2 class="text-4xl font-bold text-gray-800 mb-8">Conclusão</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-16">
+            Este projeto é um claro exemplo do meu compromisso em criar soluções de design que não só encantam visualmente, 
+            mas que também entregam valor estratégico e resultados tangíveis. Ao liderar a reestruturação e aprimoramento do 
+            Design System do Empretec, demonstrei como a padronização e a consistência podem otimizar processos, 
+            reduzindo retrabalho e inconsistências, e melhorando a comunicação entre equipes. <br><br>
+
+            Minha abordagem focada em escalabilidade e adaptabilidade garantiu que o sistema se tornasse um ativo vivo, 
+            capaz de impulsionar a produtividade e a agilidade no desenvolvimento de novas funcionalidades, 
+            resultando em um produto final mais robusto e eficaz. <br><br>
+            
+            
+            Se você busca uma Designer que pense de forma sistêmica, 
+            colabore ativamente e transforme desafios em sucesso, ficarei feliz em me conectar e entender como posso ajudar em seu próximo projeto/produto.
+          </p>
+          <a href="https://api.whatsapp.com/send?phone=351935015659&text=Ol%C3%A1%20Natasha,%20acabei%20de%20ver%20o%20seu%20portf%C3%B3lio.%20Podemos%20conversar?"
+          target="_blank" class="text-green-500 hover:text-green-600 font-semibold inline-flex items-center group">
+          Entrar em contato
+          <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition duration-300" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+        </div>
+        <!-- Fim conclusão -->
+
+    </div>
+  </section>
+
+  <footer id="footer-section" class="bg-gray-900 text-white py-12 rounded-t-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col sm:flex-row justify-between items-center text-gray-400">
+        <div class="text-lg font-bold text-white flex items-center mb-4 sm:mb-0">
+          Natasha Tamashiro
+        </div>
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

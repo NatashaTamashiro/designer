@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Enable smooth scrolling for anchor links */
+      scroll-behavior: smooth;
+    }
+
+    /* Custom styles for mobile menu toggle icon */
+    .hamburger-icon {
+      display: block;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .hamburger-icon span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .hamburger-icon.open span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-icon.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-icon.open span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  </style>
+</head>
+<!-- Fim Head -->
+
+<body class="bg-gray-100">
+
+  <!-- Menu / header -->
+  <nav class="bg-white p-4 shadow-md sticky top-0 z-50 rounded-b-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-lg font-bold text-gray-800 flex items-center">
+        Natasha Tamashiro
+      </div>
+
+      <div class="md:hidden hamburger-icon" onclick="toggleMobileMenu(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="mobile-menu"
+        class="hidden md:flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0 absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none py-4 md:py-0 px-4 md:px-0 rounded-b-lg md:rounded-none">
+        <a href="#hero-section"
+          class="text-gray-600 hover:text-pink-500 transition duration-300 rounded-md p-2 block text-center">Início</a>
+        <a href="#direto-ao-ponto"
+          class="text-gray-600 hover:text-pink-500 transition duration-300 rounded-md p-2 block text-center">Direto ao ponto</a>
+        <a href="#perfil"
+          class="text-gray-600 hover:text-pink-500 transition duration-300 rounded-md p-2 block text-center">Perfil</a>
+        <a href="#contatos"
+          class="text-gray-600 hover:text-pink-500 transition duration-300 rounded-md p-2 block text-center">Contatos</a>
+      </div>
+
+      <div class="flex items-center space-x-4 hidden md:flex">
+  <a href="https://api.whatsapp.com/send?phone=351935015659&text=Ol%C3%A1%20Natasha,%20acabei%20de%20ver%20o%20seu%20portf%C3%B3lio.%20Podemos%20conversar?"
+     target="_blank"
+     class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 flex items-center">
+    Entrar em contato
+    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </svg>
+  </a>
+</div>
+
+    </div>
+  </nav>
+  <!-- Fim menu / header -->
+
+  <!-- Hero -->
+  <header id="hero-section"
+    class="relative min-h-screen flex items-center justify-center text-white py-16 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-88" style="background-image: url('waves.avif');"></div>
+
+    <div class="relative z-10 text-center max-w-4xl mx-auto">
+      <p class="text-lg mb-8 text-gray-600 font-medium">UX UI Designer</p>
+      <h1 class="text-5xl md:text-7xl text-black font-extrabold leading-tight mb-8 drop-shadow-lg">
+        Natasha Tamashiro
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-600">
+        Mais de 8 anos de experiência como designer, na grande maioria, nos setores de Finanças e Educacional. <br><br>
+        Meu propósito é impulsionar negócios e experiências digitais que conectam, facilitam e inspiram através do
+        design e da tecnologia. <br><br>
+        Acredito na força da colaboração e da comunicação como pilares para decisões criativas, eficientes e
+        estratégicas. <br><br>
+        Vamos juntos transformar o mundo digital ?!
+      </p>
+      <p class="mt-48 text-sm text-gray-500">Role para baixo ▼</p>
+    </div>
+  </header>
+  <!-- Fim Hero -->
+
+  <!-- Collapses -->
+  <section id="direto-ao-ponto" class="bg-white py-16 px-4 rounded-lg shadow-md">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Direto ao ponto</h2>
+
+      <div class="space-y-6 max-w-3xl mx-auto">
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button
+            class="w-full text-left p-6 flex justify-between items-center text-lg font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300"
+            onclick="toggleFAQ(this)">
+            Meu objetivo profissional
+            <span class="text-gray-500 text-2xl">+</span>
+          </button>
+          <div class="p-6 pt-0 hidden text-gray-600 leading-relaxed">
+            - Busco sempre por conhecimento, então aprender com o próximo e ensinar tudo que sei faz parte para o
+            crescimento profissional. <br>
+            - Me tornar referência naquilo que faço.
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button
+            class="w-full text-left p-6 flex justify-between items-center text-lg font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300"
+            onclick="toggleFAQ(this)">
+            Ferramentas e metodologias
+            <span class="text-gray-500 text-2xl">+</span>
+          </button>
+          <div class="p-6 pt-0 hidden text-gray-600 leading-relaxed">
+            <span class="font-semibold">Protótipo: </span> <br>
+            Figma. <br><br>
+
+            <span class="font-semibold">Arquitetura da informação: </span> <br>
+            Figma, Figjam, Miro, Whimsical <br><br>
+
+            <span class="font-semibold">Documentação: </span> <br>
+            Figma, Notion. <br><br>
+
+            <span class="font-semibold">Testes: </span> <br>
+            Maze, Hotjar. <br><br>
+
+            <span class="font-semibold">Atividades: </span> <br>
+            Trello, Jira, Gitlab, ClickUp. <br><br>
+
+            <span class="font-semibold">Comunicação: </span> <br>
+            Discord, Teams. <br><br>
+
+            <span class="font-semibold">Metodologias: </span> <br>
+            Design Thinking, Double Diamond, Lean UX, Design Sprint. <br><br>
+
+            <span class="font-semibold">Cerimônias de Design: </span> <br>
+            1:1 , Design critique, design review, daily stand up, DS update, design break. <br><br>
+
+            <span class="font-semibold">Conhecimentos: </span> <br>
+            Motion design, HTML, CSS. <br><br>
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button
+            class="w-full text-left p-6 flex justify-between items-center text-lg font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300"
+            onclick="toggleFAQ(this)">
+            Como posso contribuir para sua empresa?
+            <span class="text-gray-500 text-2xl">+</span>
+          </button>
+          <div class="p-6 pt-0 hidden text-gray-600 leading-relaxed">
+            - Construção do processo de criação de produtos digitais, da descoberta até a entrega. <br>
+
+            - Acompanhamento e apoio às pesquisas de usuários. <br>
+
+            - Criar e testar ideias de maneira ágil para evitar desperdícios de recursos. <br>
+
+            - Benchmarking e Deskresearch são reis! <br>
+
+            - Soluções viáveis, acessiveis e que entregam valor aos usuários finais. <br>
+
+            - Wireframes de baixa, média e alta fidelidade, de acordo com as necessidades. <br>
+
+            - Protótipos em interfaces Web e Mobile. <br>
+
+            - Criação e/ou suporte do Design System. <br>
+
+            - Análises de dados, testes e interações. <br>
+
+            - Acompanhamento e a poio aos desenvolvedores. <br>
+
+            - Palestras e workshops internos se necessário. <br>
+
+            - Estudos contínuos. <br>
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button
+            class="w-full text-left p-6 flex justify-between items-center text-lg font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300"
+            onclick="toggleFAQ(this)">
+            O que busco em uma empresa
+            <span class="text-gray-500 text-2xl">+</span>
+          </button>
+          <div class="p-6 pt-0 hidden text-gray-600 leading-relaxed">
+            - Atuar e colaborar em um time multidisciplinar propondo as melhores soluções em conjunto. <br>
+
+            - Ouvir os usuários sempre que possível (O produto está em constante evolução). <br>
+
+            - Ambiente colaborativo e dinâmico. <br>
+
+            - Valorização dos estudos e crescimento. <br>
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button
+            class="w-full text-left p-6 flex justify-between items-center text-lg font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300"
+            onclick="toggleFAQ(this)">
+            Soft skills
+            <span class="text-gray-500 text-2xl">+</span>
+          </button>
+          <div class="p-6 pt-0 hidden text-gray-600 leading-relaxed">
+            - Comunicação empática; <br>
+            - Colaboração em equipe; <br>
+            - Adaptabilidade; <br>
+            - Espírito de aprendizagem contínua; <br>
+            - Perfil extrovertido.
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden">
+          <button
+            class="w-full text-left p-6 flex justify-between items-center text-lg font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition duration-300"
+            onclick="toggleFAQ(this)">
+            Localização e comunicação
+            <span class="text-gray-500 text-2xl">+</span>
+          </button>
+          <div class="p-6 pt-0 hidden text-gray-600 leading-relaxed">
+            - Porto, Portugal. <br><br>
+            - Português (nativo); <br>
+            - Inglês (intermediário).
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Fim collapses -->
+
+
+  <!-- Tabs -->
+  <section id="perfil" class="bg-gray-50 py-16 px-4 shadow-md">
+    <div class="container mx-auto">
+      <div class="flex border-b border-gray-200 mb-16">
+        <button
+          class="tab-button py-2 px-4 text-lg font-medium text-gray-600 hover:text-gray-800 focus:outline-none border-b-2 border-transparent hover:border-pink-500"
+          data-tab="cases">Cases</button>
+        <button
+          class="tab-button py-2 px-4 text-lg font-medium text-gray-600 hover:text-gray-800 focus:outline-none border-b-2 border-transparent hover:border-pink-500"
+          data-tab="experiencias">Experiências</button>
+        <button
+          class="tab-button py-2 px-4 text-lg font-medium text-gray-600 hover:text-gray-800 focus:outline-none border-b-2 border-transparent hover:border-pink-500"
+          data-tab="formacao">Formação</button>
+        <button
+          class="tab-button py-2 px-4 text-lg font-medium text-gray-600 hover:text-gray-800 focus:outline-none border-b-2 border-transparent hover:border-pink-500"
+          data-tab="sobre-mim">Sobre mim</button>
+      </div>
+
+      <!-- Cases -->
+      <div id="cases-content" class="tab-content">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Meus cases</h2>
+        <!-- Case 1 -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-56">
+          <div class="md:w-2/3 text-center md:text-left">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Construindo valor com Design System: <br> <span class="text-2xl"> Da implementação à metrificação. </span></h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Atuando no produto do Empretec e em todos os seus módulos (Urbano, Arena, Rural e Startup), identifiquei a necessidade de criar e implementar um Design System próprio. <br> O objetivo foi garantir consistência visual e coerência nos componentes utilizados ao longo das diferentes frentes do produto.
+            </p>
+          </div>
+          <div class="md:w-2/3 flex justify-center md:justify-end">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+              <a href="case_1.html">
+                <img src="case_1_empretecDS.png" alt="Imagem de um Design System" class="w-full h-80 object-cover"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-56">
+          <div class="md:w-2/3 flex justify-center md:justify-end">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+              <img src="typography.avif" alt="Blog Post Image" class="w-full h-80 object-cover">
+            </div>
+          </div>
+          <div class="md:w-2/3 text-center md:text-left">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Case 2</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Compartilhe seus posts para aumentar o tráfego.
+              Comece um blog para compartilhar seus pensamentos e atrair mais visitantes. Postar com regularidade
+              aumentará o tráfego do seu site e manterá seu público engajado.
+            </p>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
+          <div class="md:w-2/3 text-center md:text-left">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Case 3</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Compartilhe seus posts para aumentar o tráfego.
+              Comece um blog para compartilhar seus pensamentos e atrair mais visitantes. Postar com regularidade
+              aumentará o tráfego do seu site e manterá seu público engajado.
+            </p>
+          </div>
+          <div class="md:w-2/3 flex justify-center md:justify-end">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+              <img src="test.avif" alt="Blog Post Image" class="w-full h-80 object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Fim cases -->
+
+      <!-- Experiências profissionais -->
+      <div id="experiencias-content" class="tab-content hidden">
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">Experiências Profissionais</h2>
+          <!-- Experiência 1 -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-8">
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">- Porto Digital <span
+                  class="text-green-600 text-sm font-normal">11/2022 até o momento</span></h2>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Wake Up! </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Ambiental </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Criação do aplicativo em protótipos de alta fidelidade e navegaveis, user stories, card sorting,
+                arquitetura da informação, motion design.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span> <a
+                  href="https://www.portoambiente.pt/noticias/projeto-wake-up-reune-parceiros-em-torno-da-literacia-ambiental"
+                  target="_blank" class="text-blue-600 hover:text-blue-500 transition duration-300 ">Projeto "Wake UP!"
+                  reúne parceiros em torno da literacia ambiental.</a> </p>
+            </div>
+
+
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4 opacity-0">- . <span
+                  class="text-green-600 text-sm font-normal">.</span></h2>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                EIA/Explore Porto (Rotas e roteiros do Porto) </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Mobilidade Urbana </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Criação, ajustes e manutenção de páginas de um produto existente (web e app), protótipo em alta
+                fidelidade e navegavel.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span> <a
+                  href="https://eia.explore.porto.pt/#/lp" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">Explore a cidade.</a> </p>
+            </div>
+          </div>
+
+          <p class="text-lg text-gray-600 leading-relaxed mb-32"> <span class="text-gray-800 font-bold">Outros projetos
+              atuados:</span> Gestão de meta dados, Comércio Fora do Sítio, CityFlow (Planejamento e execução), MST
+            (Ponto de partilha de veículos). </p>
+
+          <!-- Experiência 2 -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-8">
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">- Sebrae <span
+                  class="text-green-600 text-sm font-normal">01/2022 até o momento</span></h2>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Empretec </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Educacional </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Fluxos de navegação de gerenciamento de candidatos, melhoria na experiência do usuário, criação e
+                manutenção do Design System, criação da Landingpage, coleta de feedback dos usuários com o Feedback
+                Pop-up.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span> <a
+                  href="https://sebrae.com.br/sites/PortalSebrae/empretec" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">Empretec.</a> </p>
+            </div>
+          </div>
+
+          <p class="text-lg text-gray-600 leading-relaxed mb-32"> <span class="text-gray-800 font-bold">Outros projetos
+              atuados:</span> Design System do Sebrae, ALI, Sisbolsas, Seap.</p>
+
+          <!-- Experiência 3 -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-8">
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">- ModalGR <span
+                  class="text-gray-400 text-sm font-normal">04/2018 - 07/2022</span></h2>
+              <h4 class="text-3xl font-bold text-gray-800 mb-4">Como Líder</h4>
+              <p class="text-lg text-gray-600 leading-relaxed opacity-0"> <span
+                  class="text-gray-800 font-bold">Projeto:</span> Projeto </p>
+              <p class="text-lg text-gray-600 leading-relaxed opacity-0"> <span
+                  class="text-gray-800 font-bold">Setor:</span> Setor </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Mentoria interna para os integrantes, Workshops internos, one-on-one técnico, design review, design
+                critique, design break, participação e acompanhamento dos projetos de toda a squad, compartilhamento de
+                conteúdo.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span> <a
+                  href="https://www.linkedin.com/feed/update/urn:li:activity:6951163453382266880/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A6951163453382266880%29"
+                  target="_blank" class="text-blue-600 hover:text-blue-500 transition duration-300 ">Bootcamp
+                  interno.</a> </p>
+            </div>
+
+
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4 opacity-0">- ModalGR <span
+                  class="text-gray-400 text-sm font-normal">04/2018 - 07/2022</span></h2>
+              <h4 class="text-3xl font-bold text-gray-800 mb-4 opacity-0">Como Líder</h4>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Mega Imagem </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Saúde </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Desenvolvimento e manutenção de três sistemas (web, app e totem), mapeamento de jornadas e criação das
+                personas, teste de guerrilha, entrevista com os usuários, definição do tom e voz da marca.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma, Figjam. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span>
+                <a href="https://www.megaimagem.com.br/#" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">Site Mega Imagem, </a>
+                <a href="https://play.google.com/store/apps/details?id=com.autoservico&hl=pt_PT" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">App Mega Imagem.</a>
+              </p>
+            </div>
+          </div>
+
+          <p class="text-lg text-gray-600 leading-relaxed mb-8"> <span class="text-gray-800 font-bold">Outros projetos
+              atuados:</span> Gestão de meta dados, Comércio Fora do Sítio, CityFlow (Planejamento e execução), MST
+            (Ponto de partilha de veículos). </p>
+
+
+          <!-- Experiência 3.1 -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-8">
+            <div class="md:w-2/4 text-center md:text-left">
+              <h4 class="text-3xl font-bold text-gray-800 mb-4">Como Sênior</h4>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Itaú </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Financeiro </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Participação em dois projetos, redesign do produto com foco na arquitetura da informação e
+                acessibilidade do gestor, utilização de um Design System existente e sugestões de novos componentes.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma. </p>
+            </div>
+
+
+            <div class="md:w-2/4 text-center md:text-left">
+              <h4 class="text-3xl font-bold text-gray-800 mb-4 opacity-0">.</h4>
+              <h5 class="text-white mb-8 opacity-0">.</h5>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Brasil Export e Portal BE News </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Notícia </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Contato direto com os stakeholders, colaboração com equipes multifuncionais (PO, QA, Devs), wireframes e
+                fluxos de navegação, protótipos de alta fidelidade, motion design, criação das telas para Web e app,
+                teste A/B.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span>
+                <a href="https://forumbrasilexport.com.br/" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">Site Brasil Export, </a>
+                <a href="https://play.google.com/store/apps/details?id=com.brasilexport.app&hl=pt_PT" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">App Brasil Export, </a>
+                <a href="https://portalbenews.com.br/" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">Site BE News, </a>
+                <a href="https://play.google.com/store/apps/details?id=com.benews.app&hl=pt_PT" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">App BE News. </a>
+              </p>
+            </div>
+          </div>
+
+
+          <!-- Experiência 4 -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-16">
+            <div class="md:w-2/4 text-center md:text-left">
+              <h4 class="text-3xl font-bold text-gray-800 mb-4">Como Pleno</h4>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Bandeirantes </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Financeiro </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Arquitetura da informação, card sorting, acessibilidade, criação do Style Guide, acompanhamento do
+                desenvolvimento da interface.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma. </p>
+            </div>
+          </div>
+
+
+          <!-- Experiência 5 -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-8">
+            <div class="md:w-2/4 text-center md:text-left">
+              <h4 class="text-3xl font-bold text-gray-800 mb-4">Como Junior</h4>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Allied / Samsung </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Financeiro </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Utilização do Design Thinking (Duplo diamante). Compreensão das necessidades do cliente, descobrindo e
+                definindo problemas. Arquitetura da informação (navegação) do app. Condução de entrevistas e testes A/B.
+                Criação das telas no Figma e testes com o Maze. Criação do Design System.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma, Maze, Miro. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span>
+                <a href="https://www.facebook.com/alliedbrasil/posts/a-soudi-foi-criada-pela-allied-em-outubro-de-2019-buscando-ser-uma-solu%C3%A7%C3%A3o-finan/2967547690192740/"
+                  target="_blank" class="text-blue-600 hover:text-blue-500 transition duration-300 ">Soudi - Allied.
+                </a>
+              </p>
+            </div>
+
+
+            <div class="md:w-2/4 text-center md:text-left">
+              <h4 class="text-3xl font-bold text-gray-800 mb-4 opacity-0">.</h4>
+              <h5 class="text-white mb-8 opacity-0">.</h5>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                Vertere WMS / Faturamento </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Portuário </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Criação das telas no Figma, wireframes e protótipos navegáveis. Criação de dashboards, arquitetura da
+                informação. Desenvolvimento de telas em Angular8.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma, Angular 8 , Material Design. </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Link:</span>
+                <a href="https://www.youtube.com/watch?v=uusfvbioaiA&ab_channel=DPWorldBrazil" target="_blank"
+                  class="text-blue-600 hover:text-blue-500 transition duration-300 ">Celulose no Porto de Santos. </a>
+              </p>
+            </div>
+          </div>
+
+          <p class="text-lg text-gray-600 leading-relaxed mb-32"> <span class="text-gray-800 font-bold">Outros projetos
+              atuados:</span> Mega Imagem (React Native) - Setor Saúde, Libra Terminais Santos (AngularJS, Bootstrap) -
+            Setor Portuário. </p>
+
+          <!-- Experiência 6 -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-8">
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">- PAX Tecnologia <span
+                  class="text-gray-400 text-sm font-normal">01/2017 - 04/2018</span></h2>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Projeto:</span>
+                DOHA </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Setor:</span>
+                Portuário </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Funções:</span>
+                Contato direto com os stakeholders, colaboração com equipes multifuncionais (PO, QA, Devs), wireframes e
+                fluxos de navegação, protótipos navegáveis. Criação e manutenção de telas em Vue.js.</p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span
+                  class="text-gray-800 font-bold">Tecnologias:</span> Figma, Vue.js , Framework Quasar. </p>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+      <!-- Fim experiências profissionais -->
+
+      <!-- Formação acadêmica -->
+      <div id="formacao-content" class="tab-content hidden">
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">Formação Acadêmica e Cursos</h2>
+          <!-- Formações -->
+          <div class="flex flex-col md:flex-row justify-between gap-12 mb-8">
+            <!-- Formações -->
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">- Formação </h2>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">UX
+                  Unicórnio:</span> UX Design e User Research <span
+                  class="text-gray-400 text-sm font-normal">09/2023</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Anhembi
+                  Morumbi:</span> User Experience <span class="text-gray-400 text-sm font-normal">12/2021</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Fatec Rubens
+                  Lara:</span> Sistemas para Internet <span class="text-gray-400 text-sm font-normal">08/2018</span></p>
+            </div>
+            <!-- Fim formações -->
+
+            <!-- Cursos -->
+            <div class="md:w-2/4 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">- Cursos </h2>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Design
+                  Boost:</span> Interfaces Web e Mobile, Design System <span
+                  class="text-green-600 text-sm font-normal">2025</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Curso de
+                  Figma:</span> Bootcamp <span class="text-gray-400 text-sm font-normal">05/2024</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">IT
+                  Recruiter:</span> Bootcamp <span class="text-gray-400 text-sm font-normal">08/2023</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">The
+                  Starter:</span> Prototipagem e animações <span
+                  class="text-gray-400 text-sm font-normal">01/2023</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">The
+                  Starter:</span> DS - Design em escala <span class="text-gray-400 text-sm font-normal">11/2022</span>
+              </p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">How
+                  Bootcamps:</span> Design Ops <span class="text-gray-400 text-sm font-normal">04/2021</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Estação
+                  Cellep:</span> UI/UX & Prototype <span class="text-gray-400 text-sm font-normal">04/2021</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">How
+                  Bootcamps:</span> UX Design <span class="text-gray-400 text-sm font-normal">08/2020</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Udemy:</span>
+                Varios cursos <span class="text-gray-400 text-sm font-normal">2017</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Evolute:</span>
+                Design gráfico, Adobe Premiere e After Effects <span
+                  class="text-gray-400 text-sm font-normal">2017</span></p>
+              <p class="text-lg text-gray-600 leading-relaxed"> <span class="text-gray-800 font-bold">Microcamp:</span>
+                Adobe Dreamweaver e Flash <span class="text-gray-400 text-sm font-normal">2015</span></p>
+            </div>
+            <!-- Fim cursos -->
+          </div>
+        </div>
+      </div>
+      <!-- Fim formação acadêmica -->
+
+      <!-- Sobre mim -->
+      <div id="sobre-mim-content" class="tab-content hidden">
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">Sobre mim</h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-24">
+            <div class="md:w-1/3 flex justify-center md:justify-end">
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full mx-auto">
+                <img src="nat.png"
+                  alt="Foto de Natasha Tamashiro. Cabelo liso com franja, para o lado direito, cor castanho escuro, olhos marrom escuro, sorrindo."
+                  class="w-full h-100 object-cover">
+              </div>
+            </div>
+            <div class="md:w-2/3 text-center md:text-left">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Santista de coração!</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Nascida e criada em Santos, no litoral de São Paulo, sou apaixonada por praia, esportes e tudo que
+                envolve criatividade. <br><br>
+                Minha jornada no design começou em 2015, com cursos na Microcamp, onde tive meu primeiro contato com
+                ferramentas como Adobe Dreamweaver e Flash. <br><br>
+                Em 2017, aprofundei meus conhecimentos em design gráfico, edição de vídeo e motion, com Adobe Premiere e
+                After Effects, na escola Evolute. <br><br>
+                Ainda em 2017, dei início aos meus estudos em UX/UI Design através de cursos online, o que me levou à
+                minha primeira oportunidade profissional na área, atuando com UX/UI e front-end. <br><br>
+                Desde então, já são mais de 8 anos de experiência em tecnologia e design, sempre unindo estratégia,
+                criatividade e foco no usuário. <br><br>
+                Acredito que a colaboração e a boa comunicação são fundamentais para criar soluções eficientes e
+                sustentáveis. <br><br>
+                Gosto de trabalhar lado a lado com diferentes equipes, entendendo as necessidades reais do usuário e
+                contribuindo para decisões estratégicas que evitam retrabalho e geram valor para o negócio. <br><br>
+                Se você acredita que temos interesses em comum, entre em contato comigo! <br> Só clicar em alguma rede
+                logo abaixo ;)
+
+              </p>
+            </div>
+          </div>
+
+          </p>
+        </div>
+      </div>
+      <!-- Fim sobre mim -->
+    </div>
+  </section>
+  <!-- Fim Tabs -->
+
+  <!-- Contatos -->
+  <section id="contatos" class="bg-gray-100 py-16 px-4 shadow-md">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Vamos nos conectar?!</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          Se você busca soluções de design estratégico que geram resultados reais e impulsionam produtos, adoraria trocar ideias. <br>
+          Vamos nos conectar e transformar sua ideia em realidade!
+        </p>
+      </div>
+
+      <div class="md:w-1/2 flex flex-col space-y-6">
+        <a href="https://api.whatsapp.com/send?phone=351935015659&text=Ol%C3%A1%20Natasha,%20acabei%20de%20ver%20o%20seu%20portf%C3%B3lio.%20Podemos%20conversar?"
+          target="_blank"
+          class="block bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-4">
+          <div class="p-3 bg-green-100 rounded-full flex items-center justify-center w-14 h-14">
+            <svg viewBox="0 0 360 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M307.546 52.5655C273.709 18.685 228.706 0.0171895 180.756 0C81.951 0 1.53846 80.404 1.50408 179.235C1.48689 210.829 9.74646 241.667 25.4319 268.844L0 361.736L95.0236 336.811C121.203 351.096 150.683 358.616 180.679 358.625H180.756C279.544 358.625 359.966 278.212 360 179.381C360.017 131.483 341.392 86.4547 307.546 52.5741V52.5655ZM180.756 328.354H180.696C153.966 328.346 127.744 321.16 104.865 307.589L99.4242 304.358L43.034 319.149L58.0834 264.168L54.5423 258.53C39.6304 234.809 31.749 207.391 31.7662 179.244C31.8006 97.1036 98.6334 30.2707 180.817 30.2707C220.61 30.2879 258.015 45.8015 286.145 73.9665C314.276 102.123 329.755 139.562 329.738 179.364C329.703 261.513 262.871 328.346 180.756 328.346V328.354ZM262.475 216.777C257.997 214.534 235.978 203.704 231.869 202.209C227.761 200.713 224.779 199.966 221.796 204.452C218.814 208.939 210.228 219.029 207.615 222.011C205.002 225.002 202.389 225.372 197.911 223.128C193.434 220.885 179.003 216.158 161.891 200.902C148.578 189.024 139.587 174.362 136.975 169.875C134.362 165.389 136.7 162.965 138.934 160.739C140.945 158.728 143.412 155.505 145.655 152.892C147.899 150.279 148.638 148.406 150.133 145.423C151.629 142.432 150.881 139.82 149.764 137.576C148.646 135.333 139.691 113.287 135.952 104.323C132.316 95.5909 128.621 96.777 125.879 96.6309C123.266 96.5019 120.284 96.4762 117.293 96.4762C114.302 96.4762 109.454 97.5935 105.346 102.08C101.238 106.566 89.6691 117.404 89.6691 139.441C89.6691 161.478 105.716 182.785 107.959 185.776C110.202 188.767 139.544 234.001 184.469 253.408C195.153 258.023 203.498 260.782 210.004 262.845C220.731 266.257 230.494 265.776 238.212 264.624C246.816 263.335 264.71 253.786 268.44 243.326C272.17 232.866 272.17 223.893 271.053 222.028C269.936 220.163 266.945 219.037 262.467 216.794L262.475 216.777Z"
+                fill="#25D366" />
+            </svg>
+
+          </div>
+          <span class="text-xl font-semibold text-gray-800">Whatsapp</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/natasha-tamashiro/" target="_blank"
+          class="block bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-4">
+          <div class="p-3 bg-blue-100 rounded-full flex items-center justify-center w-14 h-14">
+            <svg class="w-8 h-8 text-blue-700" fill="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.04 8.98H4.9V24H.04V8.98zM8.31 8.98h4.63v2.06h.07c.64-1.2 2.21-2.47 4.56-2.47 4.88 0 5.78 3.22 5.78 7.41V24h-4.87v-6.62c0-1.58-.03-3.61-2.2-3.61-2.21 0-2.55 1.73-2.55 3.5V24H8.31V8.98z" />
+            </svg>
+
+          </div>
+          <span class="text-xl font-semibold text-gray-800">LinkedIn</span>
+        </a>
+
+        <a href="mailto:nat.tamashiro@hotmail.com" target="_blank"
+          class="block bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center space-x-4">
+          <div class="p-3 bg-blue-100 rounded-full flex items-center justify-center w-14 h-14">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+
+          </div>
+          <span class="text-xl font-semibold text-gray-800">E-mail</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Fim contatos -->
+
+  <!-- Footer -->
+  <footer id="footer-section" class="bg-gray-900 text-white py-12 rounded-t-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col sm:flex-row justify-between items-center text-gray-400">
+        <div class="text-lg font-bold text-white flex items-center mb-4 sm:mb-0">
+          Natasha Tamashiro
+        </div>
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Fim footer -->
+
+  <script>
+    // JavaScript for FAQ section to toggle visibility
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('span');
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        content.classList.add('block');
+        icon.textContent = '-';
+      } else {
+        content.classList.remove('block');
+        content.classList.add('hidden');
+        icon.textContent = '+';
+      }
+    }
+
+    // JavaScript for Mobile Menu Toggle
+    function toggleMobileMenu(icon) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      icon.classList.toggle('open'); // Toggle hamburger icon animation
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    }
+
+    // Close mobile menu when a link is clicked (for smooth scrolling)
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.querySelector('.hamburger-icon');
+        if (mobileMenu.classList.contains('flex')) {
+          mobileMenu.classList.remove('flex');
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('open');
+        }
+      });
+    });
+
+    // JavaScript for Tab functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Deactivate all tab buttons and hide all tab contents
+          tabButtons.forEach(btn => {
+            btn.classList.remove('border-pink-500', 'text-gray-800', 'font-semibold');
+            btn.classList.add('border-transparent', 'text-gray-600', 'font-medium');
+          });
+          tabContents.forEach(content => {
+            content.classList.add('hidden');
+          });
+
+          // Activate the clicked tab button
+          button.classList.add('border-pink-500', 'text-gray-800', 'font-semibold');
+          button.classList.remove('border-transparent', 'text-gray-600', 'font-medium');
+
+
+          // Show the corresponding tab content
+          const targetTab = button.dataset.tab;
+          document.getElementById(`${targetTab}-content`).classList.remove('hidden');
+        });
+      });
+
+      // Initialize: show the first tab ("Cases") by default
+      const casesTabButton = document.querySelector('.tab-button[data-tab="cases"]');
+      if (casesTabButton) {
+        casesTabButton.click();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
